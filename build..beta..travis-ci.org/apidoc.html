@@ -46,11 +46,11 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="https://github.com/louischatriot/nedb"
-        
+
     >nedb (v1.8.0)</a>
 </h1>
 <h4>File-based embedded data store for node.js</h4>
@@ -58,634 +58,634 @@
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb">module nedb</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.cursor">
             function <span class="apidocSignatureSpan">nedb.</span>cursor
             <span class="apidocSignatureSpan">(db, query, execFn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.executor">
             function <span class="apidocSignatureSpan">nedb.</span>executor
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes">
             function <span class="apidocSignatureSpan">nedb.</span>indexes
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence">
             function <span class="apidocSignatureSpan">nedb.</span>persistence
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.super_">
             function <span class="apidocSignatureSpan">nedb.</span>super_
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nedb.</span>cursor.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nedb.</span>customUtils</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nedb.</span>executor.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nedb.</span>indexes.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nedb.</span>model</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nedb.</span>persistence.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nedb.</span>storage</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.cursor">module nedb.cursor</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.cursor.cursor">
             function <span class="apidocSignatureSpan">nedb.</span>cursor
             <span class="apidocSignatureSpan">(db, query, execFn)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.cursor.prototype">module nedb.cursor.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.cursor.prototype._exec">
             function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>_exec
             <span class="apidocSignatureSpan">(_callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.cursor.prototype.exec">
             function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>exec
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.cursor.prototype.limit">
             function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>limit
             <span class="apidocSignatureSpan">(limit)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.cursor.prototype.project">
             function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>project
             <span class="apidocSignatureSpan">(candidates)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.cursor.prototype.projection">
             function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>projection
             <span class="apidocSignatureSpan">(projection)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.cursor.prototype.skip">
             function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>skip
             <span class="apidocSignatureSpan">(skip)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.cursor.prototype.sort">
             function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>sort
             <span class="apidocSignatureSpan">(sortQuery)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.customUtils">module nedb.customUtils</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.customUtils.uid">
             function <span class="apidocSignatureSpan">nedb.customUtils.</span>uid
             <span class="apidocSignatureSpan">(len)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.executor">module nedb.executor</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.executor.executor">
             function <span class="apidocSignatureSpan">nedb.</span>executor
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.executor.prototype">module nedb.executor.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.executor.prototype.processBuffer">
             function <span class="apidocSignatureSpan">nedb.executor.prototype.</span>processBuffer
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.executor.prototype.push">
             function <span class="apidocSignatureSpan">nedb.executor.prototype.</span>push
             <span class="apidocSignatureSpan">(task, forceQueuing)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.indexes">module nedb.indexes</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.indexes">
             function <span class="apidocSignatureSpan">nedb.</span>indexes
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.indexes.prototype">module nedb.indexes.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.prototype.getAll">
             function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getAll
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.prototype.getBetweenBounds">
             function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getBetweenBounds
             <span class="apidocSignatureSpan">(query)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.prototype.getMatching">
             function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getMatching
             <span class="apidocSignatureSpan">(value)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.prototype.insert">
             function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>insert
             <span class="apidocSignatureSpan">(doc)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.prototype.insertMultipleDocs">
             function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>insertMultipleDocs
             <span class="apidocSignatureSpan">(docs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.prototype.remove">
             function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>remove
             <span class="apidocSignatureSpan">(doc)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.prototype.reset">
             function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>reset
             <span class="apidocSignatureSpan">(newData)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.prototype.revertUpdate">
             function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>revertUpdate
             <span class="apidocSignatureSpan">(oldDoc, newDoc)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.prototype.update">
             function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>update
             <span class="apidocSignatureSpan">(oldDoc, newDoc)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.indexes.prototype.updateMultipleDocs">
             function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>updateMultipleDocs
             <span class="apidocSignatureSpan">(pairs)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.model">module nedb.model</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.model.areThingsEqual">
             function <span class="apidocSignatureSpan">nedb.model.</span>areThingsEqual
             <span class="apidocSignatureSpan">(a, b)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.model.checkObject">
             function <span class="apidocSignatureSpan">nedb.model.</span>checkObject
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.model.compareThings">
             function <span class="apidocSignatureSpan">nedb.model.</span>compareThings
             <span class="apidocSignatureSpan">(a, b, _compareStrings)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.model.deepCopy">
             function <span class="apidocSignatureSpan">nedb.model.</span>deepCopy
             <span class="apidocSignatureSpan">(obj, strictKeys)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.model.deserialize">
             function <span class="apidocSignatureSpan">nedb.model.</span>deserialize
             <span class="apidocSignatureSpan">(rawData)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.model.getDotValue">
             function <span class="apidocSignatureSpan">nedb.model.</span>getDotValue
             <span class="apidocSignatureSpan">(obj, field)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.model.isPrimitiveType">
             function <span class="apidocSignatureSpan">nedb.model.</span>isPrimitiveType
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.model.match">
             function <span class="apidocSignatureSpan">nedb.model.</span>match
             <span class="apidocSignatureSpan">(obj, query)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.model.modify">
             function <span class="apidocSignatureSpan">nedb.model.</span>modify
             <span class="apidocSignatureSpan">(obj, updateQuery)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.model.serialize">
             function <span class="apidocSignatureSpan">nedb.model.</span>serialize
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.persistence">module nedb.persistence</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence.persistence">
             function <span class="apidocSignatureSpan">nedb.</span>persistence
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence.ensureDirectoryExists">
             function <span class="apidocSignatureSpan">nedb.persistence.</span>ensureDirectoryExists
             <span class="apidocSignatureSpan">(dir, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence.getNWAppFilename">
             function <span class="apidocSignatureSpan">nedb.persistence.</span>getNWAppFilename
             <span class="apidocSignatureSpan">(appName, relativeFilename)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.persistence.prototype">module nedb.persistence.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence.prototype.compactDatafile">
             function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>compactDatafile
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence.prototype.loadDatabase">
             function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>loadDatabase
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence.prototype.persistCachedDatabase">
             function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>persistCachedDatabase
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence.prototype.persistNewState">
             function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>persistNewState
             <span class="apidocSignatureSpan">(newDocs, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence.prototype.setAutocompactionInterval">
             function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>setAutocompactionInterval
             <span class="apidocSignatureSpan">(interval)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence.prototype.stopAutocompaction">
             function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>stopAutocompaction
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.persistence.prototype.treatRawData">
             function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>treatRawData
             <span class="apidocSignatureSpan">(rawData)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.nedb.storage">module nedb.storage</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.appendFile">
             function <span class="apidocSignatureSpan">nedb.storage.</span>appendFile
-            <span class="apidocSignatureSpan">(path, data, options, callback)</span>
+            <span class="apidocSignatureSpan">(path, data, options, callback_)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.crashSafeWriteFile">
             function <span class="apidocSignatureSpan">nedb.storage.</span>crashSafeWriteFile
             <span class="apidocSignatureSpan">(filename, data, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.ensureDatafileIntegrity">
             function <span class="apidocSignatureSpan">nedb.storage.</span>ensureDatafileIntegrity
             <span class="apidocSignatureSpan">(filename, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.ensureFileDoesntExist">
             function <span class="apidocSignatureSpan">nedb.storage.</span>ensureFileDoesntExist
             <span class="apidocSignatureSpan">(file, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.exists">
             function <span class="apidocSignatureSpan">nedb.storage.</span>exists
             <span class="apidocSignatureSpan">(path, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.flushToStorage">
             function <span class="apidocSignatureSpan">nedb.storage.</span>flushToStorage
             <span class="apidocSignatureSpan">(options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.mkdirp">
             function <span class="apidocSignatureSpan">nedb.storage.</span>mkdirp
             <span class="apidocSignatureSpan">(p, opts, f, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.readFile">
             function <span class="apidocSignatureSpan">nedb.storage.</span>readFile
-            <span class="apidocSignatureSpan">(path, options, callback)</span>
+            <span class="apidocSignatureSpan">(path, options, callback_)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.rename">
             function <span class="apidocSignatureSpan">nedb.storage.</span>rename
             <span class="apidocSignatureSpan">(oldPath, newPath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.unlink">
             function <span class="apidocSignatureSpan">nedb.storage.</span>unlink
             <span class="apidocSignatureSpan">(path, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.storage.writeFile">
             function <span class="apidocSignatureSpan">nedb.storage.</span>writeFile
-            <span class="apidocSignatureSpan">(path, data, options, callback)</span>
+            <span class="apidocSignatureSpan">(path, data, options, callback_)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb" id="apidoc.module.nedb">module nedb</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.cursor" id="apidoc.element.nedb.cursor">
         function <span class="apidocSignatureSpan">nedb.</span>cursor
@@ -700,9 +700,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.executor" id="apidoc.element.nedb.executor">
         function <span class="apidocSignatureSpan">nedb.</span>executor
@@ -747,9 +747,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes" id="apidoc.element.nedb.indexes">
         function <span class="apidocSignatureSpan">nedb.</span>indexes
@@ -768,9 +768,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence" id="apidoc.element.nedb.persistence">
         function <span class="apidocSignatureSpan">nedb.</span>persistence
@@ -792,11 +792,11 @@
 
   // After serialization and before deserialization hooks with some basic sanity checks
   if (options.afterSerialization &#x26;&#x26; !options.beforeDeserialization) {
-    throw new Error(&#x22;Serialization hook defined but deserialization hook undefined, cautiously refusing to start NeDB to prevent\
+    throw new Error(&#x22;Serialization hook defined but deserialization hook undefined, cautiously refusing to start NeDB to prevent
  dataloss&#x22;);
   }
   if (!options.afterSerialization &#x26;&#x26; options.beforeDeserialization) {
-    throw new Error(&#x22;Serialization hook undefined but deserialization hook defined, cautiously refusing to start NeDB to prevent\
+    throw new Error(&#x22;Serialization hook undefined but deserialization hook defined, cautiously refusing to start NeDB to prevent
  dataloss&#x22;);
   }
   this.afterSerialization = options.afterSerialization || function (s) { return s; };
@@ -805,8 +805,8 @@
     for (j = 0; j &#x3c; 10; j += 1) {
       randomString = customUtils.uid(i);
       if (this.beforeDeserialization(this.afterSerialization(randomString)) !== randomString) {
-        throw new Error(&#x22;beforeDeserialization is not the reverse of afterSerialization, cautiously refusing to start NeDB to pr\
-event dataloss&#x22;);
+        throw new Error(&#x22;beforeDeserialization is not the reverse of afterSerialization, cautiously refusing to start NeDB to prevent
+ dataloss&#x22;);
       }
     }
   }
@@ -825,9 +825,9 @@ event dataloss&#x22;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.super_" id="apidoc.element.nedb.super_">
         function <span class="apidocSignatureSpan">nedb.</span>super_
@@ -840,28 +840,28 @@ event dataloss&#x22;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.cursor" id="apidoc.module.nedb.cursor">module nedb.cursor</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.cursor.cursor" id="apidoc.element.nedb.cursor.cursor">
         function <span class="apidocSignatureSpan">nedb.</span>cursor
@@ -876,14 +876,14 @@ event dataloss&#x22;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.cursor.prototype" id="apidoc.module.nedb.cursor.prototype">module nedb.cursor.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.cursor.prototype._exec" id="apidoc.element.nedb.cursor.prototype._exec">
         function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>_exec
@@ -943,8 +943,8 @@ event dataloss&#x22;);
         var criterion, compare, i;
         for (i = 0; i &#x3c; criteria.length; i++) {
           criterion = criteria[i];
-          compare = criterion.direction * model.compareThings(model.getDotValue(a, criterion.key), model.getDotValue(b, criterio\
-n.key), self.db.compareStrings);
+          compare = criterion.direction * model.compareThings(model.getDotValue(a, criterion.key), model.getDotValue(b, criterion
+.key), self.db.compareStrings);
           if (compare !== 0) {
             return compare;
           }
@@ -972,9 +972,9 @@ n.key), self.db.compareStrings);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.cursor.prototype.exec" id="apidoc.element.nedb.cursor.prototype.exec">
         function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>exec
@@ -987,13 +987,13 @@ n.key), self.db.compareStrings);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 // Let&#x27;s say the database contains these 4 documents
-// doc1 = { _id: &#x27;id1&#x27;, planet: &#x27;Mars&#x27;, system: &#x27;solar&#x27;, inhabited: false, satellites: [&#x27;Phob\
-os&#x27;, &#x27;Deimos&#x27;] }
-// doc2 = { _id: &#x27;id2&#x27;, planet: &#x27;Earth&#x27;, system: &#x27;solar&#x27;, inhabited: true, humans: { genders: 2, e\
-yes: true } }
+// doc1 = { _id: &#x27;id1&#x27;, planet: &#x27;Mars&#x27;, system: &#x27;solar&#x27;, inhabited: false, satellites: [&#x27;Phobos
+&#x27;, &#x27;Deimos&#x27;] }
+// doc2 = { _id: &#x27;id2&#x27;, planet: &#x27;Earth&#x27;, system: &#x27;solar&#x27;, inhabited: true, humans: { genders: 2, eyes
+: true } }
 // doc3 = { _id: &#x27;id3&#x27;, planet: &#x27;Jupiter&#x27;, system: &#x27;solar&#x27;, inhabited: false }
-// doc4 = { _id: &#x27;id4&#x27;, planet: &#x27;Omicron Persei 8&#x27;, system: &#x27;futurama&#x27;, inhabited: true, humans: {\
- genders: 7 } }
+// doc4 = { _id: &#x27;id4&#x27;, planet: &#x27;Omicron Persei 8&#x27;, system: &#x27;futurama&#x27;, inhabited: true, humans: {
+genders: 7 } }
 
 // No query used means all results are returned (before the Cursor modifiers)
 db.find({}).sort({ planet: 1 }).skip(1).limit(2).<span class="apidocCodeKeywordSpan">exec</span>(function (err, docs) {
@@ -1006,9 +1006,9 @@ db.find({ system: &#x27;solar&#x27; }).sort({ planet: -1 }).exec(function (err, 
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.cursor.prototype.limit" id="apidoc.element.nedb.cursor.prototype.limit">
         function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>limit
@@ -1022,13 +1022,13 @@ db.find({ system: &#x27;solar&#x27; }).sort({ planet: -1 }).exec(function (err, 
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 // Let&#x27;s say the database contains these 4 documents
-// doc1 = { _id: &#x27;id1&#x27;, planet: &#x27;Mars&#x27;, system: &#x27;solar&#x27;, inhabited: false, satellites: [&#x27;Phob\
-os&#x27;, &#x27;Deimos&#x27;] }
-// doc2 = { _id: &#x27;id2&#x27;, planet: &#x27;Earth&#x27;, system: &#x27;solar&#x27;, inhabited: true, humans: { genders: 2, e\
-yes: true } }
+// doc1 = { _id: &#x27;id1&#x27;, planet: &#x27;Mars&#x27;, system: &#x27;solar&#x27;, inhabited: false, satellites: [&#x27;Phobos
+&#x27;, &#x27;Deimos&#x27;] }
+// doc2 = { _id: &#x27;id2&#x27;, planet: &#x27;Earth&#x27;, system: &#x27;solar&#x27;, inhabited: true, humans: { genders: 2, eyes
+: true } }
 // doc3 = { _id: &#x27;id3&#x27;, planet: &#x27;Jupiter&#x27;, system: &#x27;solar&#x27;, inhabited: false }
-// doc4 = { _id: &#x27;id4&#x27;, planet: &#x27;Omicron Persei 8&#x27;, system: &#x27;futurama&#x27;, inhabited: true, humans: {\
- genders: 7 } }
+// doc4 = { _id: &#x27;id4&#x27;, planet: &#x27;Omicron Persei 8&#x27;, system: &#x27;futurama&#x27;, inhabited: true, humans: {
+genders: 7 } }
 
 // No query used means all results are returned (before the Cursor modifiers)
 db.find({}).sort({ planet: 1 }).skip(1).<span class="apidocCodeKeywordSpan">limit</span>(2).exec(function (err, docs) {
@@ -1041,9 +1041,9 @@ db.find({ system: &#x27;solar&#x27; }).sort({ planet: -1 }).exec(function (err, 
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.cursor.prototype.project" id="apidoc.element.nedb.cursor.prototype.project">
         function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>project
@@ -1066,8 +1066,8 @@ db.find({ system: &#x27;solar&#x27; }).sort({ planet: -1 }).exec(function (err, 
   // Check for consistency
   keys = Object.keys(this._projection);
   keys.forEach(function (k) {
-    if (action !== undefined &#x26;&#x26; self._projection[k] !== action) { throw new Error(&#x22;Can&#x27;t both keep and omit fields except for _i\
-d&#x22;); }
+    if (action !== undefined &#x26;&#x26; self._projection[k] !== action) { throw new Error(&#x22;Can&#x27;t both keep and omit fields except for _id
+&#x22;); }
     action = self._projection[k];
   });
 
@@ -1114,9 +1114,9 @@ d&#x22;); }
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.cursor.prototype.projection" id="apidoc.element.nedb.cursor.prototype.projection">
         function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>projection
@@ -1136,8 +1136,8 @@ db.find({ planet: &#x27;Mars&#x27; }, { planet: 0, system: 1 }, function (err, d
 });
 
 // You can also use it in a Cursor way but this syntax is not compatible with MongoDB
-db.find({ planet: &#x27;Mars&#x27; }).<span class="apidocCodeKeywordSpan">projection</span>({ planet: 1, system: 1 }).exec(funct\
-ion (err, docs) {
+db.find({ planet: &#x27;Mars&#x27; }).<span class="apidocCodeKeywordSpan">projection</span>({ planet: 1, system: 1 }).exec(function
+ (err, docs) {
   // docs is [{ planet: &#x27;Mars&#x27;, system: &#x27;solar&#x27;, _id: &#x27;id1&#x27; }]
 });
 
@@ -1147,9 +1147,9 @@ db.findOne({ planet: &#x27;Earth&#x27; }).projection({ planet: 1, &#x27;humans.g
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.cursor.prototype.skip" id="apidoc.element.nedb.cursor.prototype.skip">
         function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>skip
@@ -1163,13 +1163,13 @@ db.findOne({ planet: &#x27;Earth&#x27; }).projection({ planet: 1, &#x27;humans.g
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 // Let&#x27;s say the database contains these 4 documents
-// doc1 = { _id: &#x27;id1&#x27;, planet: &#x27;Mars&#x27;, system: &#x27;solar&#x27;, inhabited: false, satellites: [&#x27;Phob\
-os&#x27;, &#x27;Deimos&#x27;] }
-// doc2 = { _id: &#x27;id2&#x27;, planet: &#x27;Earth&#x27;, system: &#x27;solar&#x27;, inhabited: true, humans: { genders: 2, e\
-yes: true } }
+// doc1 = { _id: &#x27;id1&#x27;, planet: &#x27;Mars&#x27;, system: &#x27;solar&#x27;, inhabited: false, satellites: [&#x27;Phobos
+&#x27;, &#x27;Deimos&#x27;] }
+// doc2 = { _id: &#x27;id2&#x27;, planet: &#x27;Earth&#x27;, system: &#x27;solar&#x27;, inhabited: true, humans: { genders: 2, eyes
+: true } }
 // doc3 = { _id: &#x27;id3&#x27;, planet: &#x27;Jupiter&#x27;, system: &#x27;solar&#x27;, inhabited: false }
-// doc4 = { _id: &#x27;id4&#x27;, planet: &#x27;Omicron Persei 8&#x27;, system: &#x27;futurama&#x27;, inhabited: true, humans: {\
- genders: 7 } }
+// doc4 = { _id: &#x27;id4&#x27;, planet: &#x27;Omicron Persei 8&#x27;, system: &#x27;futurama&#x27;, inhabited: true, humans: {
+genders: 7 } }
 
 // No query used means all results are returned (before the Cursor modifiers)
 db.find({}).sort({ planet: 1 }).<span class="apidocCodeKeywordSpan">skip</span>(1).limit(2).exec(function (err, docs) {
@@ -1182,9 +1182,9 @@ db.find({ system: &#x27;solar&#x27; }).sort({ planet: -1 }).exec(function (err, 
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.cursor.prototype.sort" id="apidoc.element.nedb.cursor.prototype.sort">
         function <span class="apidocSignatureSpan">nedb.cursor.prototype.</span>sort
@@ -1198,13 +1198,13 @@ db.find({ system: &#x27;solar&#x27; }).sort({ planet: -1 }).exec(function (err, 
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 // Let&#x27;s say the database contains these 4 documents
-// doc1 = { _id: &#x27;id1&#x27;, planet: &#x27;Mars&#x27;, system: &#x27;solar&#x27;, inhabited: false, satellites: [&#x27;Phob\
-os&#x27;, &#x27;Deimos&#x27;] }
-// doc2 = { _id: &#x27;id2&#x27;, planet: &#x27;Earth&#x27;, system: &#x27;solar&#x27;, inhabited: true, humans: { genders: 2, e\
-yes: true } }
+// doc1 = { _id: &#x27;id1&#x27;, planet: &#x27;Mars&#x27;, system: &#x27;solar&#x27;, inhabited: false, satellites: [&#x27;Phobos
+&#x27;, &#x27;Deimos&#x27;] }
+// doc2 = { _id: &#x27;id2&#x27;, planet: &#x27;Earth&#x27;, system: &#x27;solar&#x27;, inhabited: true, humans: { genders: 2, eyes
+: true } }
 // doc3 = { _id: &#x27;id3&#x27;, planet: &#x27;Jupiter&#x27;, system: &#x27;solar&#x27;, inhabited: false }
-// doc4 = { _id: &#x27;id4&#x27;, planet: &#x27;Omicron Persei 8&#x27;, system: &#x27;futurama&#x27;, inhabited: true, humans: {\
- genders: 7 } }
+// doc4 = { _id: &#x27;id4&#x27;, planet: &#x27;Omicron Persei 8&#x27;, system: &#x27;futurama&#x27;, inhabited: true, humans: {
+genders: 7 } }
 
 // No query used means all results are returned (before the Cursor modifiers)
 db.find({}).<span class="apidocCodeKeywordSpan">sort</span>({ planet: 1 }).skip(1).limit(2).exec(function (err, docs) {
@@ -1217,14 +1217,14 @@ db.find({ system: &#x27;solar&#x27; }).sort({ planet: -1 }).exec(function (err, 
 });
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.customUtils" id="apidoc.module.nedb.customUtils">module nedb.customUtils</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.customUtils.uid" id="apidoc.element.nedb.customUtils.uid">
         function <span class="apidocSignatureSpan">nedb.customUtils.</span>uid
@@ -1240,8 +1240,8 @@ db.find({ system: &#x27;solar&#x27; }).sort({ planet: -1 }).exec(function (err, 
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 if (!options.afterSerialization &#x26;&#x26; options.beforeDeserialization) {
-  throw new Error(&#x22;Serialization hook undefined but deserialization hook defined, cautiously refusing to start NeDB to prev\
-ent dataloss&#x22;);
+  throw new Error(&#x22;Serialization hook undefined but deserialization hook defined, cautiously refusing to start NeDB to prevent
+ dataloss&#x22;);
 }
 this.afterSerialization = options.afterSerialization || function (s) { return s; };
 this.beforeDeserialization = options.beforeDeserialization || function (s) { return s; };
@@ -1249,7 +1249,7 @@ for (i = 1; i &#x3c; 30; i += 1) {
   for (j = 0; j &#x3c; 10; j += 1) {
     randomString = customUtils.<span class="apidocCodeKeywordSpan">uid</span>(i);
     if (this.beforeDeserialization(this.afterSerialization(randomString)) !== randomString) {
-      throw new Error(&#x22;beforeDeserialization is not the reverse of afterSerialization, cautiously refusing to start NeDB to\
+      throw new Error(&#x22;beforeDeserialization is not the reverse of afterSerialization, cautiously refusing to start NeDB to
  prevent dataloss&#x22;);
     }
   }
@@ -1258,14 +1258,14 @@ for (i = 1; i &#x3c; 30; i += 1) {
 // For NW apps, store data in the same directory where NW stores application data
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.executor" id="apidoc.module.nedb.executor">module nedb.executor</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.executor.executor" id="apidoc.element.nedb.executor.executor">
         function <span class="apidocSignatureSpan">nedb.</span>executor
@@ -1310,14 +1310,14 @@ for (i = 1; i &#x3c; 30; i += 1) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.executor.prototype" id="apidoc.module.nedb.executor.prototype">module nedb.executor.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.executor.prototype.processBuffer" id="apidoc.element.nedb.executor.prototype.processBuffer">
         function <span class="apidocSignatureSpan">nedb.executor.prototype.</span>processBuffer
@@ -1349,9 +1349,9 @@ for (i = 1; i &#x3c; 30; i += 1) {
 module.exports = Persistence;
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.executor.prototype.push" id="apidoc.element.nedb.executor.prototype.push">
         function <span class="apidocSignatureSpan">nedb.executor.prototype.</span>push
@@ -1384,14 +1384,14 @@ module.exports = Persistence;
 /**
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.indexes" id="apidoc.module.nedb.indexes">module nedb.indexes</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.indexes" id="apidoc.element.nedb.indexes.indexes">
         function <span class="apidocSignatureSpan">nedb.</span>indexes
@@ -1410,14 +1410,14 @@ module.exports = Persistence;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.indexes.prototype" id="apidoc.module.nedb.indexes.prototype">module nedb.indexes.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.prototype.getAll" id="apidoc.element.nedb.indexes.prototype.getAll">
         function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getAll
@@ -1440,9 +1440,9 @@ module.exports = Persistence;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.prototype.getBetweenBounds" id="apidoc.element.nedb.indexes.prototype.getBetweenBounds">
         function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getBetweenBounds
@@ -1455,9 +1455,9 @@ module.exports = Persistence;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.prototype.getMatching" id="apidoc.element.nedb.indexes.prototype.getMatching">
         function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getMatching
@@ -1504,9 +1504,9 @@ Object.keys(_res).forEach(function (_id) {
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.prototype.insert" id="apidoc.element.nedb.indexes.prototype.insert">
         function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>insert
@@ -1565,13 +1565,13 @@ db.<span class="apidocCodeKeywordSpan">insert</span>(doc, function (err, newDoc)
 });
 ```
 
-You can also bulk-insert an array of documents. This operation is atomic, meaning that if one insert fails due to a unique const\
-raint being violated, all changes are rolled back.
+You can also bulk-insert an array of documents. This operation is atomic, meaning that if one insert fails due to a unique constraint
+ being violated, all changes are rolled back.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.prototype.insertMultipleDocs" id="apidoc.element.nedb.indexes.prototype.insertMultipleDocs">
         function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>insertMultipleDocs
@@ -1618,9 +1618,9 @@ if (key === undefined &#x26;&#x26; this.sparse) { return; }
 if (!util.isArray(key)) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.prototype.remove" id="apidoc.element.nedb.indexes.prototype.remove">
         function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>remove
@@ -1653,8 +1653,8 @@ db.update({ _id: &#x27;id1&#x27; }, { $min: { value: 8 } }, {}, function () {
 ```
 
 ### Removing documents
-`db.<span class="apidocCodeKeywordSpan">remove</span>(query, options, callback)` will remove all documents matching `query` acco\
-rding to `options`  
+`db.<span class="apidocCodeKeywordSpan">remove</span>(query, options, callback)` will remove all documents matching `query` according
+ to `options`
 * `query` is the same as the ones used for finding and updating
 * `options` only one option for now: `multi` which allows the removal of multiple documents if set to true. Default is false
 * `callback` is optional, signature: err, numRemoved
@@ -1664,9 +1664,9 @@ rding to `options`
 // { _id: &#x27;id1&#x27;, planet: &#x27;Mars&#x27;, system: &#x27;solar&#x27;, inhabited: false }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.prototype.reset" id="apidoc.element.nedb.indexes.prototype.reset">
         function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>reset
@@ -1697,9 +1697,9 @@ function Index (options) {
 *                                                 If an error is thrown during insertion, the index is not modified
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.prototype.revertUpdate" id="apidoc.element.nedb.indexes.prototype.revertUpdate">
         function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>revertUpdate
@@ -1721,9 +1721,9 @@ function Index (options) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.prototype.update" id="apidoc.element.nedb.indexes.prototype.update">
         function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>update
@@ -1751,26 +1751,26 @@ db.count({}, function (err, count) {
 
 
 ### Updating documents
-`db.<span class="apidocCodeKeywordSpan">update</span>(query, update, options, callback)` will update all documents matching `que\
-ry` according to the `update` rules:  
+`db.<span class="apidocCodeKeywordSpan">update</span>(query, update, options, callback)` will update all documents matching `query
+` according to the `update` rules:
 * `query` is the same kind of finding query you use with `find` and `findOne`
-* `update` specifies how the documents should be modified. It is either a new document or a set of modifiers (you cannot use bot\
-h together, it doesn&#x27;t make sense!)
+* `update` specifies how the documents should be modified. It is either a new document or a set of modifiers (you cannot use both
+ together, it doesn&#x27;t make sense!)
 * A new document will replace the matched docs
-* The modifiers create the fields they need to modify if they don&#x27;t exist, and you can apply them to subdocs. Available fie\
-ld modifiers are `$set` to change a field&#x27;s value, `$unset` to delete a field, `$inc` to increment a field&#x27;s value and\
- `$min`/`$max` to change field&#x27;s value, only if provided value is less/greater than current value. To work on arrays, you h\
-ave `$push`, `$pop`, `$addToSet`, `$pull`, and the special `$each` and `$slice`. See examples below for the syntax.
+* The modifiers create the fields they need to modify if they don&#x27;t exist, and you can apply them to subdocs. Available field
+ modifiers are `$set` to change a field&#x27;s value, `$unset` to delete a field, `$inc` to increment a field&#x27;s value and `$
+min`/`$max` to change field&#x27;s value, only if provided value is less/greater than current value. To work on arrays, you have
+ `$push`, `$pop`, `$addToSet`, `$pull`, and the special `$each` and `$slice`. See examples below for the syntax.
 * `options` is an object with two possible parameters
 * `multi` (defaults to `false`) which allows the modification of several documents if set to true
-* `upsert` (defaults to `false`) if you want to insert a new document corresponding to the `update` rules if your `query` doesn&\
-#x27;t match anything. If your `update` is a simple object with no modifiers, it is the inserted document. In the other case, th\
-e `query` is stripped from all operator recursively, and the `update` is applied to it.
+* `upsert` (defaults to `false`) if you want to insert a new document corresponding to the `update` rules if your `query` doesn&#
+x27;t match anything. If your `update` is a simple object with no modifiers, it is the inserted document. In the other case, the
+ `query` is stripped from all operator recursively, and the `update` is applied to it.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.indexes.prototype.updateMultipleDocs" id="apidoc.element.nedb.indexes.prototype.updateMultipleDocs">
         function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>updateMultipleDocs
@@ -1826,14 +1826,14 @@ try {
   this.insert(oldDoc);
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.model" id="apidoc.module.nedb.model">module nedb.model</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.model.areThingsEqual" id="apidoc.element.nedb.model.areThingsEqual">
         function <span class="apidocSignatureSpan">nedb.model.</span>areThingsEqual
@@ -1853,8 +1853,8 @@ try {
 
   // Arrays (no match since arrays are used as a $in)
   // undefined (no match since they mean field doesn&#x27;t exist and can&#x27;t be serialized)
-  if ((!(util.isArray(a) &#x26;&#x26; util.isArray(b)) &#x26;&#x26; (util.isArray(a) || util.isArray(b))) || a === undefined || b === undefined) { r\
-eturn false; }
+  if ((!(util.isArray(a) &#x26;&#x26; util.isArray(b)) &#x26;&#x26; (util.isArray(a) || util.isArray(b))) || a === undefined || b === undefined) { return
+ false; }
 
   // General objects (check for deep equality)
   // a and b should be objects at this point
@@ -1874,9 +1874,9 @@ eturn false; }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.model.checkObject" id="apidoc.element.nedb.model.checkObject">
         function <span class="apidocSignatureSpan">nedb.model.</span>checkObject
@@ -1900,9 +1900,9 @@ eturn false; }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.model.compareThings" id="apidoc.element.nedb.model.compareThings">
         function <span class="apidocSignatureSpan">nedb.model.</span>compareThings
@@ -1962,8 +1962,8 @@ res.sort(function(a, b) {
   var criterion, compare, i;
   for (i = 0; i &#x3c; criteria.length; i++) {
     criterion = criteria[i];
-    compare = criterion.direction * model.<span class="apidocCodeKeywordSpan">compareThings</span>(model.getDotValue(a, criterio\
-n.key), model.getDotValue(b, criterion.key), self.db.compareStrings);
+    compare = criterion.direction * model.<span class="apidocCodeKeywordSpan">compareThings</span>(model.getDotValue(a, criterion
+.key), model.getDotValue(b, criterion.key), self.db.compareStrings);
     if (compare !== 0) {
       return compare;
     }
@@ -1972,9 +1972,9 @@ n.key), model.getDotValue(b, criterion.key), self.db.compareStrings);
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.model.deepCopy" id="apidoc.element.nedb.model.deepCopy">
         function <span class="apidocSignatureSpan">nedb.model.</span>deepCopy
@@ -2013,9 +2013,9 @@ n.key), model.getDotValue(b, criterion.key), self.db.compareStrings);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.model.deserialize" id="apidoc.element.nedb.model.deserialize">
         function <span class="apidocSignatureSpan">nedb.model.</span>deserialize
@@ -2050,9 +2050,9 @@ try {
   } else if (doc.$$indexCreated &#x26;&#x26; doc.$$indexCreated.fieldName != undefined) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.model.getDotValue" id="apidoc.element.nedb.model.getDotValue">
         function <span class="apidocSignatureSpan">nedb.model.</span>getDotValue
@@ -2105,9 +2105,9 @@ candidates.forEach(function (candidate) {
     toPush = model.modify(candidate, toPush);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.model.isPrimitiveType" id="apidoc.element.nedb.model.isPrimitiveType">
         function <span class="apidocSignatureSpan">nedb.model.</span>isPrimitiveType
@@ -2125,9 +2125,9 @@ candidates.forEach(function (candidate) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.model.match" id="apidoc.element.nedb.model.match">
         function <span class="apidocSignatureSpan">nedb.model.</span>match
@@ -2179,9 +2179,9 @@ try {
           added += 1;
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.model.modify" id="apidoc.element.nedb.model.modify">
         function <span class="apidocSignatureSpan">nedb.model.</span>modify
@@ -2252,9 +2252,9 @@ if (keepId) {
   toPush._id = candidate._id;
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.model.serialize" id="apidoc.element.nedb.model.serialize">
         function <span class="apidocSignatureSpan">nedb.model.</span>serialize
@@ -2272,7 +2272,7 @@ if (keepId) {
     if (v === null) { return null; }
 
     // Hackish way of checking if object is Date (this way it works between execution contexts in node-webkit).
-    // We can&#x27;t use value directly because for dates it is already string in this function (date.toJSON was already called), so \
+    // We can&#x27;t use value directly because for dates it is already string in this function (date.toJSON was already called), so
 we use this
     if (typeof this[k].getTime === &#x27;function&#x27;) { return { $$date: this[k].getTime() }; }
 
@@ -2293,20 +2293,20 @@ this.db.getAllData().forEach(function (doc) {
 });
 Object.keys(this.db.indexes).forEach(function (fieldName) {
   if (fieldName != &#x22;_id&#x22;) {   // The special _id index is managed by datastore.js, the others need to be persisted
-    toPersist += self.afterSerialization(model.serialize({ $$indexCreated: { fieldName: fieldName, unique: self.db.indexes[field\
-Name].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
+    toPersist += self.afterSerialization(model.serialize({ $$indexCreated: { fieldName: fieldName, unique: self.db.indexes[fieldName
+].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
   }
 });
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.persistence" id="apidoc.module.nedb.persistence">module nedb.persistence</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence.persistence" id="apidoc.element.nedb.persistence.persistence">
         function <span class="apidocSignatureSpan">nedb.</span>persistence
@@ -2328,11 +2328,11 @@ Name].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
 
   // After serialization and before deserialization hooks with some basic sanity checks
   if (options.afterSerialization &#x26;&#x26; !options.beforeDeserialization) {
-    throw new Error(&#x22;Serialization hook defined but deserialization hook undefined, cautiously refusing to start NeDB to prevent\
+    throw new Error(&#x22;Serialization hook defined but deserialization hook undefined, cautiously refusing to start NeDB to prevent
  dataloss&#x22;);
   }
   if (!options.afterSerialization &#x26;&#x26; options.beforeDeserialization) {
-    throw new Error(&#x22;Serialization hook undefined but deserialization hook defined, cautiously refusing to start NeDB to prevent\
+    throw new Error(&#x22;Serialization hook undefined but deserialization hook defined, cautiously refusing to start NeDB to prevent
  dataloss&#x22;);
   }
   this.afterSerialization = options.afterSerialization || function (s) { return s; };
@@ -2341,8 +2341,8 @@ Name].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
     for (j = 0; j &#x3c; 10; j += 1) {
       randomString = customUtils.uid(i);
       if (this.beforeDeserialization(this.afterSerialization(randomString)) !== randomString) {
-        throw new Error(&#x22;beforeDeserialization is not the reverse of afterSerialization, cautiously refusing to start NeDB to pr\
-event dataloss&#x22;);
+        throw new Error(&#x22;beforeDeserialization is not the reverse of afterSerialization, cautiously refusing to start NeDB to prevent
+ dataloss&#x22;);
       }
     }
   }
@@ -2361,9 +2361,9 @@ event dataloss&#x22;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence.ensureDirectoryExists" id="apidoc.element.nedb.persistence.ensureDirectoryExists">
         function <span class="apidocSignatureSpan">nedb.persistence.</span>ensureDirectoryExists
@@ -2395,9 +2395,9 @@ try {
 } catch (e) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence.getNWAppFilename" id="apidoc.element.nedb.persistence.getNWAppFilename">
         function <span class="apidocSignatureSpan">nedb.persistence.</span>getNWAppFilename
@@ -2440,8 +2440,8 @@ try {
    console.log(&#x22;require(&#x27;nw.gui&#x27;).App.dataPath&#x22;);
    console.log(&#x22;See https://github.com/rogerwang/node-webkit/issues/500&#x22;);
    console.log(&#x22;==================================================================&#x22;);
-   this.filename = Persistence.<span class="apidocCodeKeywordSpan">getNWAppFilename</span>(options.nodeWebkitAppName, this.filen\
-ame);
+   this.filename = Persistence.<span class="apidocCodeKeywordSpan">getNWAppFilename</span>(options.nodeWebkitAppName, this.filename
+);
  }
 };
 
@@ -2451,14 +2451,14 @@ ame);
 * cb is optional, signature: err
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.persistence.prototype" id="apidoc.module.nedb.persistence.prototype">module nedb.persistence.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence.prototype.compactDatafile" id="apidoc.element.nedb.persistence.prototype.compactDatafile">
         function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>compactDatafile
@@ -2487,9 +2487,9 @@ ame);
 */
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence.prototype.loadDatabase" id="apidoc.element.nedb.persistence.prototype.loadDatabase">
         function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>loadDatabase
@@ -2563,9 +2563,9 @@ var Datastore = require(&#x27;nedb&#x27;)
 , db = new Datastore({ filename: &#x27;path/to/datafile&#x27;, autoload: true });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence.prototype.persistCachedDatabase" id="apidoc.element.nedb.persistence.prototype.persistCachedDatabase">
         function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>persistCachedDatabase
@@ -2586,8 +2586,8 @@ var Datastore = require(&#x27;nedb&#x27;)
   });
   Object.keys(this.db.indexes).forEach(function (fieldName) {
     if (fieldName != &#x22;_id&#x22;) {   // The special _id index is managed by datastore.js, the others need to be persisted
-      toPersist += self.afterSerialization(model.serialize({ $$indexCreated: { fieldName: fieldName, unique: self.db.indexes[fie\
-ldName].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
+      toPersist += self.afterSerialization(model.serialize({ $$indexCreated: { fieldName: fieldName, unique: self.db.indexes[fieldName
+].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
     }
   });
 
@@ -2614,9 +2614,9 @@ ldName].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
      if (err) { return callback(err); }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence.prototype.persistNewState" id="apidoc.element.nedb.persistence.prototype.persistNewState">
         function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>persistNewState
@@ -2651,8 +2651,8 @@ ldName].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
  * Handle every persistence-related task
  * The interface Datastore expects to be implemented is
  * * Persistence.loadDatabase(callback) and callback has signature err
- * * Persistence.<span class="apidocCodeKeywordSpan">persistNewState</span>(newDocs, callback) where newDocs is an array of docu\
-ments and callback has signature err
+ * * Persistence.<span class="apidocCodeKeywordSpan">persistNewState</span>(newDocs, callback) where newDocs is an array of documents
+ and callback has signature err
  */
 
 var storage = require(&#x27;./storage&#x27;)
@@ -2662,9 +2662,9 @@ var storage = require(&#x27;./storage&#x27;)
 , customUtils = require(&#x27;./customUtils&#x27;)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence.prototype.setAutocompactionInterval" id="apidoc.element.nedb.persistence.prototype.setAutocompactionInterval">
         function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>setAutocompactionInterval
@@ -2688,36 +2688,35 @@ var storage = require(&#x27;./storage&#x27;)
 ```
 
 ### Persistence
-Under the hood, NeDB&#x27;s persistence uses an append-only format, meaning that all updates and deletes actually result in line\
-s added at the end of the datafile, for performance reasons. The database is automatically compacted (i.e. put back in the one-l\
-ine-per-document format) every time you load each database within your application.
+Under the hood, NeDB&#x27;s persistence uses an append-only format, meaning that all updates and deletes actually result in lines
+ added at the end of the datafile, for performance reasons. The database is automatically compacted (i.e. put back in the one-line
+-per-document format) every time you load each database within your application.
 
-You can manually call the compaction function with `yourDatabase.persistence.compactDatafile` which takes no argument. It queues\
- a compaction of the datafile in the executor, to be executed sequentially after all pending operations. The datastore will fire\
+You can manually call the compaction function with `yourDatabase.persistence.compactDatafile` which takes no argument. It queues
+ a compaction of the datafile in the executor, to be executed sequentially after all pending operations. The datastore will fire
  a `compaction.done` event once compaction is finished.
 
-You can also set automatic compaction at regular intervals with `yourDatabase.persistence.<span class="apidocCodeKeywordSpan">se\
-tAutocompactionInterval</span>(interval)`, `interval` in milliseconds (a minimum of 5s is enforced), and stop automatic compacti\
-on with `yourDatabase.persistence.stopAutocompaction()`.
+You can also set automatic compaction at regular intervals with `yourDatabase.persistence.<span class="apidocCodeKeywordSpan">setAutocompactionInterval
+</span>(interval)`, `interval` in milliseconds (a minimum of 5s is enforced), and stop automatic compaction with `yourDatabase.persistence
+.stopAutocompaction()`.
 
-Keep in mind that compaction takes a bit of time (not too much: 130ms for 50k records on a typical development machine) and no o\
-ther operation can happen when it does, so most projects actually don&#x27;t need to use it.
+Keep in mind that compaction takes a bit of time (not too much: 130ms for 50k records on a typical development machine) and no other
+ operation can happen when it does, so most projects actually don&#x27;t need to use it.
 
-Compaction will also immediately remove any documents whose data line has become corrupted, assuming that the total percentage o\
-f all corrupted documents in that database still falls below the specified `corruptAlertThreshold` option&#x27;s value.
+Compaction will also immediately remove any documents whose data line has become corrupted, assuming that the total percentage of
+ all corrupted documents in that database still falls below the specified `corruptAlertThreshold` option&#x27;s value.
 
-Durability works similarly to major databases: compaction forces the OS to physically flush data to disk, while appends to the d\
-ata file do not (the OS is responsible for flushing the data). That guarantees that a server crash can never cause complete data\
- loss, while preserving performance. The worst that can happen is a crash between two syncs, causing a loss of all data between \
-the two syncs. Usually syncs are 30 seconds appart so that&#x27;s at most 30 seconds of data. &#x3c;a href=&#x22;http://oldblog.\
-antirez.com/post/redis-persistence-demystified.html&#x22; target=&#x22;_blank&#x22;&#x3e;This post by Antirez on Redis persisten\
-ce&#x3c;/a&#x3e; explains this in more details, NeDB being very close to Redis AOF persistence with `appendfsync` option set to \
-`no`.
+Durability works similarly to major databases: compaction forces the OS to physically flush data to disk, while appends to the data
+ file do not (the OS is responsible for flushing the data). That guarantees that a server crash can never cause complete data loss
+, while preserving performance. The worst that can happen is a crash between two syncs, causing a loss of all data between the two
+ syncs. Usually syncs are 30 seconds appart so that&#x27;s at most 30 seconds of data. &#x3c;a href=&#x22;http://oldblog.antirez
+.com/post/redis-persistence-demystified.html&#x22; target=&#x22;_blank&#x22;&#x3e;This post by Antirez on Redis persistence&#x3c
+;/a&#x3e; explains this in more details, NeDB being very close to Redis AOF persistence with `appendfsync` option set to `no`.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence.prototype.stopAutocompaction" id="apidoc.element.nedb.persistence.prototype.stopAutocompaction">
         function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>stopAutocompaction
@@ -2732,36 +2731,35 @@ ce&#x3c;/a&#x3e; explains this in more details, NeDB being very close to Redis A
 ```
 
 ### Persistence
-Under the hood, NeDB&#x27;s persistence uses an append-only format, meaning that all updates and deletes actually result in line\
-s added at the end of the datafile, for performance reasons. The database is automatically compacted (i.e. put back in the one-l\
-ine-per-document format) every time you load each database within your application.
+Under the hood, NeDB&#x27;s persistence uses an append-only format, meaning that all updates and deletes actually result in lines
+ added at the end of the datafile, for performance reasons. The database is automatically compacted (i.e. put back in the one-line
+-per-document format) every time you load each database within your application.
 
-You can manually call the compaction function with `yourDatabase.persistence.compactDatafile` which takes no argument. It queues\
- a compaction of the datafile in the executor, to be executed sequentially after all pending operations. The datastore will fire\
+You can manually call the compaction function with `yourDatabase.persistence.compactDatafile` which takes no argument. It queues
+ a compaction of the datafile in the executor, to be executed sequentially after all pending operations. The datastore will fire
  a `compaction.done` event once compaction is finished.
 
-You can also set automatic compaction at regular intervals with `yourDatabase.persistence.setAutocompactionInterval(interval)`, \
-`interval` in milliseconds (a minimum of 5s is enforced), and stop automatic compaction with `yourDatabase.persistence.<span cla\
-ss="apidocCodeKeywordSpan">stopAutocompaction</span>()`.
+You can also set automatic compaction at regular intervals with `yourDatabase.persistence.setAutocompactionInterval(interval)`, `
+interval` in milliseconds (a minimum of 5s is enforced), and stop automatic compaction with `yourDatabase.persistence.<span class
+="apidocCodeKeywordSpan">stopAutocompaction</span>()`.
 
-Keep in mind that compaction takes a bit of time (not too much: 130ms for 50k records on a typical development machine) and no o\
-ther operation can happen when it does, so most projects actually don&#x27;t need to use it.
+Keep in mind that compaction takes a bit of time (not too much: 130ms for 50k records on a typical development machine) and no other
+ operation can happen when it does, so most projects actually don&#x27;t need to use it.
 
-Compaction will also immediately remove any documents whose data line has become corrupted, assuming that the total percentage o\
-f all corrupted documents in that database still falls below the specified `corruptAlertThreshold` option&#x27;s value.
+Compaction will also immediately remove any documents whose data line has become corrupted, assuming that the total percentage of
+ all corrupted documents in that database still falls below the specified `corruptAlertThreshold` option&#x27;s value.
 
-Durability works similarly to major databases: compaction forces the OS to physically flush data to disk, while appends to the d\
-ata file do not (the OS is responsible for flushing the data). That guarantees that a server crash can never cause complete data\
- loss, while preserving performance. The worst that can happen is a crash between two syncs, causing a loss of all data between \
-the two syncs. Usually syncs are 30 seconds appart so that&#x27;s at most 30 seconds of data. &#x3c;a href=&#x22;http://oldblog.\
-antirez.com/post/redis-persistence-demystified.html&#x22; target=&#x22;_blank&#x22;&#x3e;This post by Antirez on Redis persisten\
-ce&#x3c;/a&#x3e; explains this in more details, NeDB being very close to Redis AOF persistence with `appendfsync` option set to \
-`no`.
+Durability works similarly to major databases: compaction forces the OS to physically flush data to disk, while appends to the data
+ file do not (the OS is responsible for flushing the data). That guarantees that a server crash can never cause complete data loss
+, while preserving performance. The worst that can happen is a crash between two syncs, causing a loss of all data between the two
+ syncs. Usually syncs are 30 seconds appart so that&#x27;s at most 30 seconds of data. &#x3c;a href=&#x22;http://oldblog.antirez
+.com/post/redis-persistence-demystified.html&#x22; target=&#x22;_blank&#x22;&#x3e;This post by Antirez on Redis persistence&#x3c
+;/a&#x3e; explains this in more details, NeDB being very close to Redis AOF persistence with `appendfsync` option set to `no`.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.persistence.prototype.treatRawData" id="apidoc.element.nedb.persistence.prototype.treatRawData">
         function <span class="apidocSignatureSpan">nedb.persistence.prototype.</span>treatRawData
@@ -2801,8 +2799,8 @@ ce&#x3c;/a&#x3e; explains this in more details, NeDB being very close to Redis A
 
   // A bit lenient on corruption
   if (data.length &#x3e; 0 &#x26;&#x26; corruptItems / data.length &#x3e; this.corruptAlertThreshold) {
-    throw new Error(&#x22;More than &#x22; + Math.floor(100 * this.corruptAlertThreshold) + &#x22;% of the data file is corrupt, the wrong befo\
-reDeserialization hook may be used. Cautiously refusing to start NeDB to prevent dataloss&#x22;);
+    throw new Error(&#x22;More than &#x22; + Math.floor(100 * this.corruptAlertThreshold) + &#x22;% of the data file is corrupt, the wrong beforeDeserialization
+ hook may be used. Cautiously refusing to start NeDB to prevent dataloss&#x22;);
   }
 
   Object.keys(dataById).forEach(function (k) {
@@ -2829,30 +2827,37 @@ Object.keys(treatedData.indexes).forEach(function (key) {
   self.db.indexes[key] = new Index(treatedData.indexes[key]);
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb.storage" id="apidoc.module.nedb.storage">module nedb.storage</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.appendFile" id="apidoc.element.nedb.storage.appendFile">
         function <span class="apidocSignatureSpan">nedb.storage.</span>appendFile
-        <span class="apidocSignatureSpan">(path, data, options, callback)</span>
+        <span class="apidocSignatureSpan">(path, data, options, callback_)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">appendFile = function (path, data, options, callback) {
-  callback = maybeCallback(arguments[arguments.length - 1]);
-  options = getOptions(options, { encoding: &#x27;utf8&#x27;, mode: 0o666, flag: &#x27;a&#x27; });
+    <li>description and source-code<pre class="apidocCodePre">appendFile = function (path, data, options, callback_) {
+  var callback = maybeCallback(arguments[arguments.length - 1]);
 
-  // Don&#x27;t make changes directly on options object
-  options = copyObject(options);
+  if (!options || typeof options === &#x27;function&#x27;) {
+    options = { encoding: &#x27;utf8&#x27;, mode: 0o666, flag: &#x27;a&#x27; };
+  } else if (typeof options === &#x27;string&#x27;) {
+    options = { encoding: options, mode: 0o666, flag: &#x27;a&#x27; };
+  } else if (typeof options !== &#x27;object&#x27;) {
+    throwOptionsError(options);
+  }
+
+  if (!options.flag)
+    options = util._extend({ flag: &#x27;a&#x27; }, options);
 
   // force append behavior when using a supplied file descriptor
-  if (!options.flag || isFd(path))
+  if (isFd(path))
     options.flag = &#x27;a&#x27;;
 
   fs.writeFile(path, data, options, callback);
@@ -2875,9 +2880,9 @@ Object.keys(treatedData.indexes).forEach(function (key) {
 * From a database&#x27;s raw data, return the corresponding
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.crashSafeWriteFile" id="apidoc.element.nedb.storage.crashSafeWriteFile">
         function <span class="apidocSignatureSpan">nedb.storage.</span>crashSafeWriteFile
@@ -2914,8 +2919,8 @@ Object.keys(treatedData.indexes).forEach(function (key) {
   });
   Object.keys(this.db.indexes).forEach(function (fieldName) {
     if (fieldName != &#x22;_id&#x22;) {   // The special _id index is managed by datastore.js, the others need to be persisted
-      toPersist += self.afterSerialization(model.serialize({ $$indexCreated: { fieldName: fieldName, unique: self.db.indexes[fie\
-ldName].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
+      toPersist += self.afterSerialization(model.serialize({ $$indexCreated: { fieldName: fieldName, unique: self.db.indexes[fieldName
+].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
     }
   });
 
@@ -2927,9 +2932,9 @@ ldName].unique, sparse: self.db.indexes[fieldName].sparse }})) + &#x27;\n&#x27;;
 };
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.ensureDatafileIntegrity" id="apidoc.element.nedb.storage.ensureDatafileIntegrity">
         function <span class="apidocSignatureSpan">nedb.storage.</span>ensureDatafileIntegrity
@@ -2973,9 +2978,9 @@ try {
   return cb(e);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.ensureFileDoesntExist" id="apidoc.element.nedb.storage.ensureFileDoesntExist">
         function <span class="apidocSignatureSpan">nedb.storage.</span>ensureFileDoesntExist
@@ -2992,9 +2997,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.exists" id="apidoc.element.nedb.storage.exists">
         function <span class="apidocSignatureSpan">nedb.storage.</span>exists
@@ -3003,8 +3008,6 @@ try {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">exists = function (path, callback) {
-  if (handleError((path = getPathFromURL(path)), cb))
-    return;
   if (!nullCheck(path, cb)) return;
   var req = new FSReqWrap();
   req.oncomplete = cb;
@@ -3029,9 +3032,9 @@ storage.ensureFileDoesntExist = function (file, callback) {
 };
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.flushToStorage" id="apidoc.element.nedb.storage.flushToStorage">
         function <span class="apidocSignatureSpan">nedb.storage.</span>flushToStorage
@@ -3087,9 +3090,9 @@ async.waterfall([
     storage.writeFile(tempFilename, data, function (err) { return cb(err); });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.mkdirp" id="apidoc.element.nedb.storage.mkdirp">
         function <span class="apidocSignatureSpan">nedb.storage.</span>mkdirp
@@ -3105,18 +3108,18 @@ async.waterfall([
     else if (!opts || typeof opts !== &#x27;object&#x27;) {
         opts = { mode: opts };
     }
-    
+
     var mode = opts.mode;
     var xfs = opts.fs || fs;
-    
+
     if (mode === undefined) {
         mode = _0777 &#x26; (~process.umask());
     }
     if (!made) made = null;
-    
+
     var cb = f || function () {};
     p = path.resolve(p);
-    
+
     xfs.mkdir(p, mode, function (er) {
         if (!er) {
             made = made || p;
@@ -3162,26 +3165,36 @@ Persistence.ensureDirectoryExists = function (dir, cb) {
 * Return the path the datafile if the given filename is relative to the directory where Node Webkit stores
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.readFile" id="apidoc.element.nedb.storage.readFile">
         function <span class="apidocSignatureSpan">nedb.storage.</span>readFile
-        <span class="apidocSignatureSpan">(path, options, callback)</span>
+        <span class="apidocSignatureSpan">(path, options, callback_)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">readFile = function (path, options, callback) {
-  callback = maybeCallback(arguments[arguments.length - 1]);
-  options = getOptions(options, { flag: &#x27;r&#x27; });
+    <li>description and source-code<pre class="apidocCodePre">readFile = function (path, options, callback_) {
+  var callback = maybeCallback(arguments[arguments.length - 1]);
 
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
+  if (!options || typeof options === &#x27;function&#x27;) {
+    options = { encoding: null, flag: &#x27;r&#x27; };
+  } else if (typeof options === &#x27;string&#x27;) {
+    options = { encoding: options, flag: &#x27;r&#x27; };
+  } else if (typeof options !== &#x27;object&#x27;) {
+    throwOptionsError(options);
+  }
+
+  var encoding = options.encoding;
+  assertEncoding(encoding);
+
+  var flag = options.flag || &#x27;r&#x27;;
+
   if (!nullCheck(path, callback))
     return;
 
-  var context = new ReadFileContext(callback, options.encoding);
+  var context = new ReadFileContext(callback, encoding);
   context.isUserFd = isFd(path); // file descriptor ownership
   var req = new FSReqWrap();
   req.context = context;
@@ -3195,7 +3208,7 @@ Persistence.ensureDirectoryExists = function (dir, cb) {
   }
 
   binding.open(pathModule._makeLong(path),
-               stringToFlags(options.flag || &#x27;r&#x27;),
+               stringToFlags(flag),
                0o666,
                req);
 }</pre></li>
@@ -3217,9 +3230,9 @@ try {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.rename" id="apidoc.element.nedb.storage.rename">
         function <span class="apidocSignatureSpan">nedb.storage.</span>rename
@@ -3229,12 +3242,6 @@ try {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">rename = function (oldPath, newPath, callback) {
   callback = makeCallback(callback);
-  if (handleError((oldPath = getPathFromURL(oldPath)), callback))
-    return;
-
-  if (handleError((newPath = getPathFromURL(newPath)), callback))
-    return;
-
   if (!nullCheck(oldPath, callback)) return;
   if (!nullCheck(newPath, callback)) return;
   var req = new FSReqWrap();
@@ -3261,9 +3268,9 @@ try {
 /**
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.unlink" id="apidoc.element.nedb.storage.unlink">
         function <span class="apidocSignatureSpan">nedb.storage.</span>unlink
@@ -3273,8 +3280,6 @@ try {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unlink = function (path, callback) {
   callback = makeCallback(callback);
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
   if (!nullCheck(path, callback)) return;
   var req = new FSReqWrap();
   req.oncomplete = callback;
@@ -3298,20 +3303,30 @@ storage.ensureFileDoesntExist = function (file, callback) {
 * @param {String} options.filename
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.nedb.storage.writeFile" id="apidoc.element.nedb.storage.writeFile">
         function <span class="apidocSignatureSpan">nedb.storage.</span>writeFile
-        <span class="apidocSignatureSpan">(path, data, options, callback)</span>
+        <span class="apidocSignatureSpan">(path, data, options, callback_)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">writeFile = function (path, data, options, callback) {
-  callback = maybeCallback(arguments[arguments.length - 1]);
-  options = getOptions(options, { encoding: &#x27;utf8&#x27;, mode: 0o666, flag: &#x27;w&#x27; });
-  const flag = options.flag || &#x27;w&#x27;;
+    <li>description and source-code<pre class="apidocCodePre">writeFile = function (path, data, options, callback_) {
+  var callback = maybeCallback(arguments[arguments.length - 1]);
+
+  if (!options || typeof options === &#x27;function&#x27;) {
+    options = { encoding: &#x27;utf8&#x27;, mode: 0o666, flag: &#x27;w&#x27; };
+  } else if (typeof options === &#x27;string&#x27;) {
+    options = { encoding: options, mode: 0o666, flag: &#x27;w&#x27; };
+  } else if (typeof options !== &#x27;object&#x27;) {
+    throwOptionsError(options);
+  }
+
+  assertEncoding(options.encoding);
+
+  var flag = options.flag || &#x27;w&#x27;;
 
   if (isFd(path)) {
     writeFd(path, true);
@@ -3327,7 +3342,7 @@ storage.ensureFileDoesntExist = function (file, callback) {
   });
 
   function writeFd(fd, isUserFd) {
-    var buffer = isUint8Array(data) ?
+    var buffer = (data instanceof Buffer) ?
         data : Buffer.from(&#x27;&#x27; + data, options.encoding || &#x27;utf8&#x27;);
     var position = /a/.test(flag) ? null : 0;
 
@@ -3352,8 +3367,8 @@ storage.ensureFileDoesntExist = function (file, callback) {
 ], function (err) { return callback(err); })
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">
