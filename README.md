@@ -1,11 +1,13 @@
-# api documentation for  [nedb (v1.8.0)](https://github.com/louischatriot/nedb)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nedb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nedb)
+# api documentation for  [nedb (v1.8.0)](https://github.com/louischatriot/nedb)  [![npm package](https://img.shields.io/npm/v/npmdoc-nedb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nedb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nedb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nedb)
 #### File-based embedded data store for node.js
 
 [![NPM](https://nodei.co/npm/nedb.png?downloads=true)](https://www.npmjs.com/package/nedb)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-nedb/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-nedb_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-nedb/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-nedb/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-nedb_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-nedb/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-nedb/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-nedb/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-nedb/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
@@ -87,16 +89,27 @@
 #### [module nedb](#apidoc.module.nedb)
 1.  [function <span class="apidocSignatureSpan">nedb.</span>cursor (db, query, execFn)](#apidoc.element.nedb.cursor)
 1.  [function <span class="apidocSignatureSpan">nedb.</span>executor ()](#apidoc.element.nedb.executor)
-1.  [function <span class="apidocSignatureSpan">nedb.</span>indexes (options)](#apidoc.element.nedb.indexes)
 1.  [function <span class="apidocSignatureSpan">nedb.</span>persistence (options)](#apidoc.element.nedb.persistence)
 1.  [function <span class="apidocSignatureSpan">nedb.</span>super_ ()](#apidoc.element.nedb.super_)
+1.  object <span class="apidocSignatureSpan">nedb.</span>commonUtilities
 1.  object <span class="apidocSignatureSpan">nedb.</span>cursor.prototype
 1.  object <span class="apidocSignatureSpan">nedb.</span>customUtils
 1.  object <span class="apidocSignatureSpan">nedb.</span>executor.prototype
-1.  object <span class="apidocSignatureSpan">nedb.</span>indexes.prototype
 1.  object <span class="apidocSignatureSpan">nedb.</span>model
 1.  object <span class="apidocSignatureSpan">nedb.</span>persistence.prototype
 1.  object <span class="apidocSignatureSpan">nedb.</span>storage
+
+#### [module nedb.commonUtilities](#apidoc.module.nedb.commonUtilities)
+1.  [function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>findDocs (d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.findDocs)
+1.  [function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>findDocsWithIn (d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.findDocsWithIn)
+1.  [function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>findOneDocs (d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.findOneDocs)
+1.  [function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>getConfiguration (benchDb)](#apidoc.element.nedb.commonUtilities.getConfiguration)
+1.  [function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>getRandomArray (n)](#apidoc.element.nedb.commonUtilities.getRandomArray)
+1.  [function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>insertDocs (d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.insertDocs)
+1.  [function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>loadDatabase (d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.loadDatabase)
+1.  [function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>prepareDb (filename, cb)](#apidoc.element.nedb.commonUtilities.prepareDb)
+1.  [function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>removeDocs (options, d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.removeDocs)
+1.  [function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>updateDocs (options, d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.updateDocs)
 
 #### [module nedb.cursor](#apidoc.module.nedb.cursor)
 1.  [function <span class="apidocSignatureSpan">nedb.</span>cursor (db, query, execFn)](#apidoc.element.nedb.cursor.cursor)
@@ -119,21 +132,6 @@
 #### [module nedb.executor.prototype](#apidoc.module.nedb.executor.prototype)
 1.  [function <span class="apidocSignatureSpan">nedb.executor.prototype.</span>processBuffer ()](#apidoc.element.nedb.executor.prototype.processBuffer)
 1.  [function <span class="apidocSignatureSpan">nedb.executor.prototype.</span>push (task, forceQueuing)](#apidoc.element.nedb.executor.prototype.push)
-
-#### [module nedb.indexes](#apidoc.module.nedb.indexes)
-1.  [function <span class="apidocSignatureSpan">nedb.</span>indexes (options)](#apidoc.element.nedb.indexes.indexes)
-
-#### [module nedb.indexes.prototype](#apidoc.module.nedb.indexes.prototype)
-1.  [function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getAll ()](#apidoc.element.nedb.indexes.prototype.getAll)
-1.  [function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getBetweenBounds (query)](#apidoc.element.nedb.indexes.prototype.getBetweenBounds)
-1.  [function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getMatching (value)](#apidoc.element.nedb.indexes.prototype.getMatching)
-1.  [function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>insert (doc)](#apidoc.element.nedb.indexes.prototype.insert)
-1.  [function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>insertMultipleDocs (docs)](#apidoc.element.nedb.indexes.prototype.insertMultipleDocs)
-1.  [function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>remove (doc)](#apidoc.element.nedb.indexes.prototype.remove)
-1.  [function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>reset (newData)](#apidoc.element.nedb.indexes.prototype.reset)
-1.  [function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>revertUpdate (oldDoc, newDoc)](#apidoc.element.nedb.indexes.prototype.revertUpdate)
-1.  [function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>update (oldDoc, newDoc)](#apidoc.element.nedb.indexes.prototype.update)
-1.  [function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>updateMultipleDocs (pairs)](#apidoc.element.nedb.indexes.prototype.updateMultipleDocs)
 
 #### [module nedb.model](#apidoc.module.nedb.model)
 1.  [function <span class="apidocSignatureSpan">nedb.model.</span>areThingsEqual (a, b)](#apidoc.element.nedb.model.areThingsEqual)
@@ -236,24 +234,6 @@ function Executor() {
 n/a
 ```
 
-#### <a name="apidoc.element.nedb.indexes"></a>[function <span class="apidocSignatureSpan">nedb.</span>indexes (options)](#apidoc.element.nedb.indexes)
-- description and source-code
-```javascript
-function Index(options) {
-  this.fieldName = options.fieldName;
-  this.unique = options.unique || false;
-  this.sparse = options.sparse || false;
-
-  this.treeOptions = { unique: this.unique, compareKeys: model.compareThings, checkValueEquality: checkValueEquality };
-
-  this.reset();   // No data in the beginning
-}
-```
-- example usage
-```shell
-n/a
-```
-
 #### <a name="apidoc.element.nedb.persistence"></a>[function <span class="apidocSignatureSpan">nedb.</span>persistence (options)](#apidoc.element.nedb.persistence)
 - description and source-code
 ```javascript
@@ -313,6 +293,351 @@ n/a
 ```javascript
 function EventEmitter() {
   EventEmitter.init.call(this);
+}
+```
+- example usage
+```shell
+n/a
+```
+
+
+
+# <a name="apidoc.module.nedb.commonUtilities"></a>[module nedb.commonUtilities](#apidoc.module.nedb.commonUtilities)
+
+#### <a name="apidoc.element.nedb.commonUtilities.findDocs"></a>[function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>findDocs (d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.findDocs)
+- description and source-code
+```javascript
+findDocs = function (d, n, profiler, cb) {
+  var beg = new Date()
+    , order = getRandomArray(n)
+    ;
+
+  profiler.step("Finding " + n + " documents");
+
+  function runFrom(i) {
+    if (i === n) {   // Finished
+      console.log("===== RESULT (find) ===== " + Math.floor(1000* n / profiler.elapsedSinceLastStep()) + " ops/s");
+      profiler.step('Finished finding ' + n + ' docs');
+      return cb();
+    }
+
+    d.find({ docNumber: order[i] }, function (err, docs) {
+      if (docs.length !== 1 || docs[0].docNumber !== order[i]) { return cb('One find didnt work'); }
+      executeAsap(function () {
+        runFrom(i + 1);
+      });
+    });
+  }
+  runFrom(0);
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.nedb.commonUtilities.findDocsWithIn"></a>[function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>findDocsWithIn (d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.findDocsWithIn)
+- description and source-code
+```javascript
+findDocsWithIn = function (d, n, profiler, cb) {
+  var beg = new Date()
+    , order = getRandomArray(n)
+    , ins = [], i, j
+    , arraySize = Math.min(10, n)   // The array for $in needs to be smaller than n (inclusive)
+    ;
+
+  // Preparing all the $in arrays, will take some time
+  for (i = 0; i < n; i += 1) {
+    ins[i] = [];
+
+    for (j = 0; j < arraySize; j += 1) {
+      ins[i].push((i + j) % n);
+    }
+  }
+
+  profiler.step("Finding " + n + " documents WITH $IN OPERATOR");
+
+  function runFrom(i) {
+    if (i === n) {   // Finished
+      console.log("===== RESULT (find with in selector) ===== " + Math.floor(1000* n / profiler.elapsedSinceLastStep()) + " ops/
+s");
+      profiler.step('Finished finding ' + n + ' docs');
+      return cb();
+    }
+
+    d.find({ docNumber: { $in: ins[i] } }, function (err, docs) {
+      if (docs.length !== arraySize) { return cb('One find didnt work'); }
+      executeAsap(function () {
+        runFrom(i + 1);
+      });
+    });
+  }
+  runFrom(0);
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.nedb.commonUtilities.findOneDocs"></a>[function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>findOneDocs (d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.findOneDocs)
+- description and source-code
+```javascript
+findOneDocs = function (d, n, profiler, cb) {
+  var beg = new Date()
+    , order = getRandomArray(n)
+    ;
+
+  profiler.step("FindingOne " + n + " documents");
+
+  function runFrom(i) {
+    if (i === n) {   // Finished
+      console.log("===== RESULT (findOne) ===== " + Math.floor(1000* n / profiler.elapsedSinceLastStep()) + " ops/s");
+      profiler.step('Finished finding ' + n + ' docs');
+      return cb();
+    }
+
+    d.findOne({ docNumber: order[i] }, function (err, doc) {
+      if (!doc || doc.docNumber !== order[i]) { return cb('One find didnt work'); }
+      executeAsap(function () {
+        runFrom(i + 1);
+      });
+    });
+  }
+  runFrom(0);
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.nedb.commonUtilities.getConfiguration"></a>[function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>getConfiguration (benchDb)](#apidoc.element.nedb.commonUtilities.getConfiguration)
+- description and source-code
+```javascript
+getConfiguration = function (benchDb) {
+  var d, n
+    , program = require('commander')
+    ;
+
+  program
+    .option('-n --number [number]', 'Size of the collection to test on', parseInt)
+    .option('-i --with-index', 'Use an index')
+    .option('-m --in-memory', 'Test with an in-memory only store')
+    .parse(process.argv);
+
+  n = program.number || 10000;
+
+  console.log("----------------------------");
+  console.log("Test with " + n + " documents");
+  console.log(program.withIndex ? "Use an index" : "Don't use an index");
+  console.log(program.inMemory ? "Use an in-memory datastore" : "Use a persistent datastore");
+  console.log("----------------------------");
+
+  d = new Datastore({ filename: benchDb
+                    , inMemoryOnly: program.inMemory
+                    });
+
+  return { n: n, d: d, program: program };
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.nedb.commonUtilities.getRandomArray"></a>[function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>getRandomArray (n)](#apidoc.element.nedb.commonUtilities.getRandomArray)
+- description and source-code
+```javascript
+function getRandomArray(n) {
+  var res = []
+    , i, j, temp
+    ;
+
+  for (i = 0; i < n; i += 1) { res[i] = i; }
+
+  for (i = n - 1; i >= 1; i -= 1) {
+    j = Math.floor((i + 1) * Math.random());
+    temp = res[i];
+    res[i] = res[j];
+    res[j] = temp;
+  }
+
+  return res;
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.nedb.commonUtilities.insertDocs"></a>[function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>insertDocs (d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.insertDocs)
+- description and source-code
+```javascript
+insertDocs = function (d, n, profiler, cb) {
+  var beg = new Date()
+    , order = getRandomArray(n)
+    ;
+
+  profiler.step('Begin inserting ' + n + ' docs');
+
+  function runFrom(i) {
+    if (i === n) {   // Finished
+      var opsPerSecond = Math.floor(1000* n / profiler.elapsedSinceLastStep());
+      console.log("===== RESULT (insert) ===== " + opsPerSecond + " ops/s");
+      profiler.step('Finished inserting ' + n + ' docs');
+      profiler.insertOpsPerSecond = opsPerSecond;
+      return cb();
+    }
+
+    d.insert({ docNumber: order[i] }, function (err) {
+      executeAsap(function () {
+        runFrom(i + 1);
+      });
+    });
+  }
+  runFrom(0);
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.nedb.commonUtilities.loadDatabase"></a>[function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>loadDatabase (d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.loadDatabase)
+- description and source-code
+```javascript
+loadDatabase = function (d, n, profiler, cb) {
+  var beg = new Date()
+    , order = getRandomArray(n)
+    ;
+
+  profiler.step("Loading the database " + n + " times");
+
+  function runFrom(i) {
+    if (i === n) {   // Finished
+      console.log("===== RESULT ===== " + Math.floor(1000* n / profiler.elapsedSinceLastStep()) + " ops/s");
+      profiler.step('Finished loading a database' + n + ' times');
+      return cb();
+    }
+
+    d.loadDatabase(function (err) {
+      executeAsap(function () {
+        runFrom(i + 1);
+      });
+    });
+  }
+  runFrom(0);
+}
+```
+- example usage
+```shell
+...
+var Datastore = require('nedb')
+, db = new Datastore();
+
+
+// Type 2: Persistent datastore with manual loading
+var Datastore = require('nedb')
+, db = new Datastore({ filename: 'path/to/datafile' });
+db.loadDatabase(function (err) {    // Callback is optional
+// Now commands will be executed
+});
+
+
+// Type 3: Persistent datastore with automatic loading
+var Datastore = require('nedb')
+, db = new Datastore({ filename: 'path/to/datafile', autoload: true });
+...
+```
+
+#### <a name="apidoc.element.nedb.commonUtilities.prepareDb"></a>[function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>prepareDb (filename, cb)](#apidoc.element.nedb.commonUtilities.prepareDb)
+- description and source-code
+```javascript
+prepareDb = function (filename, cb) {
+  Persistence.ensureDirectoryExists(path.dirname(filename), function () {
+    fs.exists(filename, function (exists) {
+      if (exists) {
+        fs.unlink(filename, cb);
+      } else { return cb(); }
+    });
+  });
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.nedb.commonUtilities.removeDocs"></a>[function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>removeDocs (options, d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.removeDocs)
+- description and source-code
+```javascript
+removeDocs = function (options, d, n, profiler, cb) {
+  var beg = new Date()
+    , order = getRandomArray(n)
+    ;
+
+  profiler.step("Removing " + n + " documents");
+
+  function runFrom(i) {
+    if (i === n) {   // Finished
+      // opsPerSecond corresponds to 1 insert + 1 remove, needed to keep collection size at 10,000
+      // We need to subtract the time taken by one insert to get the time actually taken by one remove
+      var opsPerSecond = Math.floor(1000 * n / profiler.elapsedSinceLastStep());
+      var removeOpsPerSecond = Math.floor(1 / ((1 / opsPerSecond) - (1 / profiler.insertOpsPerSecond)))
+      console.log("===== RESULT (remove) ===== " + removeOpsPerSecond + " ops/s");
+      profiler.step('Finished removing ' + n + ' docs');
+      return cb();
+    }
+
+    d.remove({ docNumber: order[i] }, options, function (err, nr) {
+      if (err) { return cb(err); }
+      if (nr !== 1) { return cb('One remove didnt work'); }
+      d.insert({ docNumber: order[i] }, function (err) {   // We need to reinsert the doc so that we keep the collection's size
+at n
+                                                           // So actually we're calculating the average time taken by one insert
+ + one remove
+        executeAsap(function () {
+          runFrom(i + 1);
+        });
+      });
+    });
+  }
+  runFrom(0);
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.nedb.commonUtilities.updateDocs"></a>[function <span class="apidocSignatureSpan">nedb.commonUtilities.</span>updateDocs (options, d, n, profiler, cb)](#apidoc.element.nedb.commonUtilities.updateDocs)
+- description and source-code
+```javascript
+updateDocs = function (options, d, n, profiler, cb) {
+  var beg = new Date()
+    , order = getRandomArray(n)
+    ;
+
+  profiler.step("Updating " + n + " documents");
+
+  function runFrom(i) {
+    if (i === n) {   // Finished
+      console.log("===== RESULT (update) ===== " + Math.floor(1000* n / profiler.elapsedSinceLastStep()) + " ops/s");
+      profiler.step('Finished updating ' + n + ' docs');
+      return cb();
+    }
+
+    // Will not actually modify the document but will take the same time
+    d.update({ docNumber: order[i] }, { docNumber: order[i] }, options, function (err, nr) {
+      if (err) { return cb(err); }
+      if (nr !== 1) { return cb('One update didnt work'); }
+      executeAsap(function () {
+        runFrom(i + 1);
+      });
+    });
+  }
+  runFrom(0);
 }
 ```
 - example usage
@@ -778,426 +1103,21 @@ push = function (task, forceQueuing) {
 - example usage
 ```shell
 ...
-      toPush = model.modify(candidate, toPush);
-    }
-    if (keepId) {
-      toPush._id = candidate._id;
-    } else {
-      delete toPush._id;
-    }
-    res.push(toPush);
-  });
-
-  return res;
-};
-
-
-/**
-...
-```
-
-
-
-# <a name="apidoc.module.nedb.indexes"></a>[module nedb.indexes](#apidoc.module.nedb.indexes)
-
-#### <a name="apidoc.element.nedb.indexes.indexes"></a>[function <span class="apidocSignatureSpan">nedb.</span>indexes (options)](#apidoc.element.nedb.indexes.indexes)
-- description and source-code
-```javascript
-function Index(options) {
-  this.fieldName = options.fieldName;
-  this.unique = options.unique || false;
-  this.sparse = options.sparse || false;
-
-  this.treeOptions = { unique: this.unique, compareKeys: model.compareThings, checkValueEquality: checkValueEquality };
-
-  this.reset();   // No data in the beginning
-}
-```
-- example usage
-```shell
-n/a
-```
-
-
-
-# <a name="apidoc.module.nedb.indexes.prototype"></a>[module nedb.indexes.prototype](#apidoc.module.nedb.indexes.prototype)
-
-#### <a name="apidoc.element.nedb.indexes.prototype.getAll"></a>[function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getAll ()](#apidoc.element.nedb.indexes.prototype.getAll)
-- description and source-code
-```javascript
-getAll = function () {
-  var res = [];
-
-  this.tree.executeOnEveryNode(function (node) {
-    var i;
-
-    for (i = 0; i < node.data.length; i += 1) {
-      res.push(node.data[i]);
-    }
-  });
-
-  return res;
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.nedb.indexes.prototype.getBetweenBounds"></a>[function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getBetweenBounds (query)](#apidoc.element.nedb.indexes.prototype.getBetweenBounds)
-- description and source-code
-```javascript
-getBetweenBounds = function (query) {
-  return this.tree.betweenBounds(query);
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.nedb.indexes.prototype.getMatching"></a>[function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>getMatching (value)](#apidoc.element.nedb.indexes.prototype.getMatching)
-- description and source-code
-```javascript
-getMatching = function (value) {
-  var self = this;
-
-  if (!util.isArray(value)) {
-    return self.tree.search(value);
-  } else {
-    var _res = {}, res = [];
-
-    value.forEach(function (v) {
-      self.getMatching(v).forEach(function (doc) {
-        _res[doc._id] = doc;
-      });
-    });
-
-    Object.keys(_res).forEach(function (_id) {
-      res.push(_res[_id]);
-    });
-
-    return res;
-  }
-}
-```
-- example usage
-```shell
-...
-
-  if (!util.isArray(value)) {
-return self.tree.search(value);
-  } else {
-var _res = {}, res = [];
-
-value.forEach(function (v) {
-  self.getMatching(v).forEach(function (doc) {
-    _res[doc._id] = doc;
-  });
-});
-
-Object.keys(_res).forEach(function (_id) {
-  res.push(_res[_id]);
-});
-...
-```
-
-#### <a name="apidoc.element.nedb.indexes.prototype.insert"></a>[function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>insert (doc)](#apidoc.element.nedb.indexes.prototype.insert)
-- description and source-code
-```javascript
-insert = function (doc) {
-  var key, self = this
-    , keys, i, failingI, error
-    ;
-
-  if (util.isArray(doc)) { this.insertMultipleDocs(doc); return; }
-
-  key = model.getDotValue(doc, this.fieldName);
-
-  // We don't index documents that don't contain the field if the index is sparse
-  if (key === undefined && this.sparse) { return; }
-
-  if (!util.isArray(key)) {
-    this.tree.insert(key, doc);
-  } else {
-    // If an insert fails due to a unique constraint, roll back all inserts before it
-    keys = _.uniq(key, projectForUnique);
-
-    for (i = 0; i < keys.length; i += 1) {
-      try {
-        this.tree.insert(keys[i], doc);
-      } catch (e) {
-        error = e;
-        failingI = i;
-        break;
-      }
-    }
-
-    if (error) {
-      for (i = 0; i < failingI; i += 1) {
-        this.tree.delete(keys[i], doc);
-      }
-
-      throw error;
-    }
-  }
-}
-```
-- example usage
-```shell
-...
-               , nedbIsAwesome: true
-               , notthere: null
-               , notToBeSaved: undefined  // Will not be saved
-               , fruits: [ 'apple', 'orange', 'pear' ]
-               , infos: { name: 'nedb' }
-               };
-
-db.insert(doc, function (err, newDoc) {   // Callback is optional
-  // newDoc is the newly inserted document, including its _id
-  // newDoc has no key called notToBeSaved since its value was undefined
-});
-'''
-
-You can also bulk-insert an array of documents. This operation is atomic, meaning that if one insert fails due to a unique constraint
- being violated, all changes are rolled back.
-...
-```
-
-#### <a name="apidoc.element.nedb.indexes.prototype.insertMultipleDocs"></a>[function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>insertMultipleDocs (docs)](#apidoc.element.nedb.indexes.prototype.insertMultipleDocs)
-- description and source-code
-```javascript
-insertMultipleDocs = function (docs) {
-  var i, error, failingI;
-
-  for (i = 0; i < docs.length; i += 1) {
-    try {
-      this.insert(docs[i]);
-    } catch (e) {
-      error = e;
-      failingI = i;
-      break;
-    }
-  }
-
-  if (error) {
-    for (i = 0; i < failingI; i += 1) {
-      this.remove(docs[i]);
-    }
-
-    throw error;
-  }
-}
-```
-- example usage
-```shell
-...
- * O(log(n))
- */
-Index.prototype.insert = function (doc) {
-var key, self = this
-  , keys, i, failingI, error
   ;
 
-if (util.isArray(doc)) { this.insertMultipleDocs(doc); return; }
+// Preparing all the $in arrays, will take some time
+for (i = 0; i < n; i += 1) {
+  ins[i] = [];
 
-key = model.getDotValue(doc, this.fieldName);
-
-// We don't index documents that don't contain the field if the index is sparse
-if (key === undefined && this.sparse) { return; }
-
-if (!util.isArray(key)) {
-...
-```
-
-#### <a name="apidoc.element.nedb.indexes.prototype.remove"></a>[function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>remove (doc)](#apidoc.element.nedb.indexes.prototype.remove)
-- description and source-code
-```javascript
-remove = function (doc) {
-  var key, self = this;
-
-  if (util.isArray(doc)) { doc.forEach(function (d) { self.remove(d); }); return; }
-
-  key = model.getDotValue(doc, this.fieldName);
-
-  if (key === undefined && this.sparse) { return; }
-
-  if (!util.isArray(key)) {
-    this.tree.delete(key, doc);
-  } else {
-    _.uniq(key, projectForUnique).forEach(function (_key) {
-      self.tree.delete(_key, doc);
-    });
+  for (j = 0; j < arraySize; j += 1) {
+    ins[i].push((i + j) % n);
   }
 }
-```
-- example usage
-```shell
-...
 
-db.update({ _id: 'id1' }, { $min: { value: 8 } }, {}, function () {
-  // The document will not be modified
-});
-'''
+profiler.step("Finding " + n + " documents WITH $IN OPERATOR");
 
-### Removing documents
-'db.remove(query, options, callback)' will remove all documents matching 'query' according to 'options'
-* 'query' is the same as the ones used for finding and updating
-* 'options' only one option for now: 'multi' which allows the removal of multiple documents if set to true. Default is false
-* 'callback' is optional, signature: err, numRemoved
-
-'''javascript
-// Let's use the same example collection as in the "finding document" part
-// { _id: 'id1', planet: 'Mars', system: 'solar', inhabited: false }
-...
-```
-
-#### <a name="apidoc.element.nedb.indexes.prototype.reset"></a>[function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>reset (newData)](#apidoc.element.nedb.indexes.prototype.reset)
-- description and source-code
-```javascript
-reset = function (newData) {
-  this.tree = new BinarySearchTree(this.treeOptions);
-
-  if (newData) { this.insert(newData); }
-}
-```
-- example usage
-```shell
-...
-function Index (options) {
- this.fieldName = options.fieldName;
- this.unique = options.unique || false;
- this.sparse = options.sparse || false;
-
- this.treeOptions = { unique: this.unique, compareKeys: model.compareThings, checkValueEquality: checkValueEquality };
-
- this.reset();   // No data in the beginning
-}
-
-
-/**
-* Reset an index
-* @param {Document or Array of documents} newData Optional, data to initialize the index with
-*                                                 If an error is thrown during insertion, the index is not modified
-...
-```
-
-#### <a name="apidoc.element.nedb.indexes.prototype.revertUpdate"></a>[function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>revertUpdate (oldDoc, newDoc)](#apidoc.element.nedb.indexes.prototype.revertUpdate)
-- description and source-code
-```javascript
-revertUpdate = function (oldDoc, newDoc) {
-  var revert = [];
-
-  if (!util.isArray(oldDoc)) {
-    this.update(newDoc, oldDoc);
-  } else {
-    oldDoc.forEach(function (pair) {
-      revert.push({ oldDoc: pair.newDoc, newDoc: pair.oldDoc });
-    });
-    this.update(revert);
-  }
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.nedb.indexes.prototype.update"></a>[function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>update (oldDoc, newDoc)](#apidoc.element.nedb.indexes.prototype.update)
-- description and source-code
-```javascript
-update = function (oldDoc, newDoc) {
-  if (util.isArray(oldDoc)) { this.updateMultipleDocs(oldDoc); return; }
-
-  this.remove(oldDoc);
-
-  try {
-    this.insert(newDoc);
-  } catch (e) {
-    this.insert(oldDoc);
-    throw e;
-  }
-}
-```
-- example usage
-```shell
-...
-db.count({}, function (err, count) {
-// count equals to 4
-});
-'''
-
-
-### Updating documents
-'db.update(query, update, options, callback)' will update all documents matching 'query' according to the 'update' rules:
-* 'query' is the same kind of finding query you use with 'find' and 'findOne'
-* 'update' specifies how the documents should be modified. It is either a new document or a set of modifiers (you cannot use both
- together, it doesn't make sense!)
-* A new document will replace the matched docs
-* The modifiers create the fields they need to modify if they don't exist, and you can apply them to subdocs. Available field modifiers
- are '$set' to change a field's value, '$unset' to delete a field, '$inc' to increment a field's value and '$min'/'$max' to change
- field's value, only if provided value is less/greater than current value. To work on arrays, you have '$push', '$pop', '$addToSet
-', '$pull', and the special '$each' and '$slice'. See examples below for the syntax.
-* 'options' is an object with two possible parameters
-* 'multi' (defaults to 'false') which allows the modification of several documents if set to true
-* 'upsert' (defaults to 'false') if you want to insert a new document corresponding to the 'update' rules if your 'query' doesn'
-t match anything. If your 'update' is a simple object with no modifiers, it is the inserted document. In the other case, the 'query
-' is stripped from all operator recursively, and the 'update' is applied to it.
-...
-```
-
-#### <a name="apidoc.element.nedb.indexes.prototype.updateMultipleDocs"></a>[function <span class="apidocSignatureSpan">nedb.indexes.prototype.</span>updateMultipleDocs (pairs)](#apidoc.element.nedb.indexes.prototype.updateMultipleDocs)
-- description and source-code
-```javascript
-updateMultipleDocs = function (pairs) {
-  var i, failingI, error;
-
-  for (i = 0; i < pairs.length; i += 1) {
-    this.remove(pairs[i].oldDoc);
-  }
-
-  for (i = 0; i < pairs.length; i += 1) {
-    try {
-      this.insert(pairs[i].newDoc);
-    } catch (e) {
-      error = e;
-      failingI = i;
-      break;
-    }
-  }
-
-  // If an error was raised, roll back changes in the inverse order
-  if (error) {
-    for (i = 0; i < failingI; i += 1) {
-      this.remove(pairs[i].newDoc);
-    }
-
-    for (i = 0; i < pairs.length; i += 1) {
-      this.insert(pairs[i].oldDoc);
-    }
-
-    throw error;
-  }
-}
-```
-- example usage
-```shell
-...
-
-/**
- * Update a document in the index
- * If a constraint is violated, changes are rolled back and an error thrown
- * Naive implementation, still in O(log(n))
- */
-Index.prototype.update = function (oldDoc, newDoc) {
-if (util.isArray(oldDoc)) { this.updateMultipleDocs(oldDoc); return; }
-
-this.remove(oldDoc);
-
-try {
-  this.insert(newDoc);
-} catch (e) {
-  this.insert(oldDoc);
+function runFrom(i) {
+  if (i === n) {   // Finished
 ...
 ```
 
@@ -1714,21 +1634,21 @@ ensureDirectoryExists = function (dir, cb) {
 - example usage
 ```shell
 ...
-  self.db.resetIndexes();
+};
 
-  // In-memory only datastore
-  if (self.inMemoryOnly) { return callback(null); }
 
-  async.waterfall([
-    function (cb) {
-      Persistence.ensureDirectoryExists(path.dirname(self.filename), function (err) {
-        storage.ensureDatafileIntegrity(self.filename, function (err) {
-          storage.readFile(self.filename, 'utf8', function (err, rawData) {
-if (err) { return cb(err); }
-
-try {
-  var treatedData = self.treatRawData(rawData);
-} catch (e) {
+/**
+ * Ensure the workspace exists and the db datafile is empty
+ */
+module.exports.prepareDb = function (filename, cb) {
+  Persistence.ensureDirectoryExists(path.dirname(filename), function () {
+    fs.exists(filename, function (exists) {
+      if (exists) {
+        fs.unlink(filename, cb);
+      } else { return cb(); }
+    });
+  });
+};
 ...
 ```
 
@@ -2310,17 +2230,18 @@ exists = function (path, callback) {
 - example usage
 ```shell
 ...
-storage.mkdirp = mkdirp;
 
 
 /**
- * Explicit name ...
+ * Ensure the workspace exists and the db datafile is empty
  */
-storage.ensureFileDoesntExist = function (file, callback) {
-  storage.exists(file, function (exists) {
-    if (!exists) { return callback(null); }
-
-    storage.unlink(file, function (err) { return callback(err); });
+module.exports.prepareDb = function (filename, cb) {
+  Persistence.ensureDirectoryExists(path.dirname(filename), function () {
+    fs.exists(filename, function (exists) {
+      if (exists) {
+        fs.unlink(filename, cb);
+      } else { return cb(); }
+    });
   });
 };
 ...
@@ -2565,20 +2486,20 @@ unlink = function (path, callback) {
 ```shell
 ...
 /**
-* Explicit name ...
-*/
-storage.ensureFileDoesntExist = function (file, callback) {
- storage.exists(file, function (exists) {
-   if (!exists) { return callback(null); }
-
-   storage.unlink(file, function (err) { return callback(err); });
- });
+ * Ensure the workspace exists and the db datafile is empty
+ */
+module.exports.prepareDb = function (filename, cb) {
+  Persistence.ensureDirectoryExists(path.dirname(filename), function () {
+    fs.exists(filename, function (exists) {
+      if (exists) {
+        fs.unlink(filename, cb);
+      } else { return cb(); }
+    });
+  });
 };
 
 
 /**
-* Flush data in OS buffer to storage if corresponding option is set
-* @param {String} options.filename
 ...
 ```
 
