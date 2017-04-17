@@ -56,9 +56,27 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.nedb.nedb">
+            function <span class="apidocSignatureSpan"></span>nedb
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.nedb.cursor">
             function <span class="apidocSignatureSpan">nedb.</span>cursor
             <span class="apidocSignatureSpan">(db, query, execFn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nedb.datastore">
+            function <span class="apidocSignatureSpan">nedb.</span>datastore
+            <span class="apidocSignatureSpan">(options)</span>
             </a>
 
         </li>
@@ -85,6 +103,15 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.nedb.super_">
             function <span class="apidocSignatureSpan">nedb.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nedb.toString">
+            function <span class="apidocSignatureSpan">nedb.</span>toString
             <span class="apidocSignatureSpan">()</span>
             </a>
 
@@ -651,10 +678,86 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.nedb.toString">module nedb.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nedb.toString.toString">
+            function <span class="apidocSignatureSpan">nedb.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.nedb" id="apidoc.module.nedb">module nedb</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nedb.nedb" id="apidoc.element.nedb.nedb">
+        function <span class="apidocSignatureSpan"></span>nedb
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Datastore(options) {
+  var filename;
+
+  // Retrocompatibility with v0.6 and before
+  if (typeof options === 'string') {
+    filename = options;
+    this.inMemoryOnly = false;   // Default
+  } else {
+    options = options || {};
+    filename = options.filename;
+    this.inMemoryOnly = options.inMemoryOnly || false;
+    this.autoload = options.autoload || false;
+    this.timestampData = options.timestampData || false;
+  }
+
+  // Determine whether in memory or persistent
+  if (!filename || typeof filename !== 'string' || filename.length === 0) {
+    this.filename = null;
+    this.inMemoryOnly = true;
+  } else {
+    this.filename = filename;
+  }
+
+  // String comparison function
+  this.compareStrings = options.compareStrings;
+
+  // Persistence handling
+  this.persistence = new Persistence({ db: this, nodeWebkitAppName: options.nodeWebkitAppName
+                                      , afterSerialization: options.afterSerialization
+                                      , beforeDeserialization: options.beforeDeserialization
+                                      , corruptAlertThreshold: options.corruptAlertThreshold
+                                      });
+
+  // This new executor is ready if we don't use persistence
+  // If we do, it will only be ready once loadDatabase is called
+  this.executor = new Executor();
+  if (this.inMemoryOnly) { this.executor.ready = true; }
+
+  // Indexed by field name, dot notation can be used
+  // _id is always indexed and since _ids are generated randomly the underlying
+  // binary is always well-balanced
+  this.indexes = {};
+  this.indexes._id = new Index({ fieldName: '_id', unique: true });
+  this.ttlIndexes = {};
+
+  // Queue a load of the database right away and call the onload handler
+  // By default (no onload handler), if there is an error there, no operation will be possible so warn the user by throwing an exception
+  if (this.autoload) { this.loadDatabase(options.onload || function (err) {
+    if (err) { throw err; }
+  }); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -668,6 +771,69 @@
   this.db = db;
   this.query = query || {};
   if (execFn) { this.execFn = execFn; }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nedb.datastore" id="apidoc.element.nedb.datastore">
+        function <span class="apidocSignatureSpan">nedb.</span>datastore
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Datastore(options) {
+  var filename;
+
+  // Retrocompatibility with v0.6 and before
+  if (typeof options === 'string') {
+    filename = options;
+    this.inMemoryOnly = false;   // Default
+  } else {
+    options = options || {};
+    filename = options.filename;
+    this.inMemoryOnly = options.inMemoryOnly || false;
+    this.autoload = options.autoload || false;
+    this.timestampData = options.timestampData || false;
+  }
+
+  // Determine whether in memory or persistent
+  if (!filename || typeof filename !== 'string' || filename.length === 0) {
+    this.filename = null;
+    this.inMemoryOnly = true;
+  } else {
+    this.filename = filename;
+  }
+
+  // String comparison function
+  this.compareStrings = options.compareStrings;
+
+  // Persistence handling
+  this.persistence = new Persistence({ db: this, nodeWebkitAppName: options.nodeWebkitAppName
+                                      , afterSerialization: options.afterSerialization
+                                      , beforeDeserialization: options.beforeDeserialization
+                                      , corruptAlertThreshold: options.corruptAlertThreshold
+                                      });
+
+  // This new executor is ready if we don't use persistence
+  // If we do, it will only be ready once loadDatabase is called
+  this.executor = new Executor();
+  if (this.inMemoryOnly) { this.executor.ready = true; }
+
+  // Indexed by field name, dot notation can be used
+  // _id is always indexed and since _ids are generated randomly the underlying
+  // binary is always well-balanced
+  this.indexes = {};
+  this.indexes._id = new Index({ fieldName: '_id', unique: true });
+  this.ttlIndexes = {};
+
+  // Queue a load of the database right away and call the onload handler
+  // By default (no onload handler), if there is an error there, no operation will be possible so warn the user by throwing an exception
+  if (this.autoload) { this.loadDatabase(options.onload || function (err) {
+    if (err) { throw err; }
+  }); }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -789,6 +955,37 @@
   EventEmitter.init.call(this);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nedb.toString" id="apidoc.element.nedb.toString">
+        function <span class="apidocSignatureSpan">nedb.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * (il the base64 conversion yields too many pluses and slashes) but
+ * that's not an issue here
+ * The probability of a collision is extremely small (need 3*10^12 documents to have one chance in a million of a collision)
+ * See http://en.wikipedia.org/wiki/Birthday_problem
+ */
+function uid (len) {
+  return crypto.randomBytes(Math.ceil(Math.max(8, len * 2)))
+    .<span class="apidocCodeKeywordSpan">toString</span>('base64')
+    .replace(/[+\/]/g, '')
+    .slice(0, len);
+}
+
+
+// Interface
+module.exports.uid = uid;
+...</pre></li>
     </ul>
 
 
@@ -3249,6 +3446,40 @@ module.exports.prepareDb = function (filename, cb) {
   }
 , async.apply(storage.flushToStorage, { filename: path.dirname(filename), isDir: true })
 ], function (err) { return callback(err); })
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nedb.toString" id="apidoc.module.nedb.toString">module nedb.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nedb.toString.toString" id="apidoc.element.nedb.toString.toString">
+        function <span class="apidocSignatureSpan">nedb.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * (il the base64 conversion yields too many pluses and slashes) but
+ * that's not an issue here
+ * The probability of a collision is extremely small (need 3*10^12 documents to have one chance in a million of a collision)
+ * See http://en.wikipedia.org/wiki/Birthday_problem
+ */
+function uid (len) {
+  return crypto.randomBytes(Math.ceil(Math.max(8, len * 2)))
+    .<span class="apidocCodeKeywordSpan">toString</span>('base64')
+    .replace(/[+\/]/g, '')
+    .slice(0, len);
+}
+
+
+// Interface
+module.exports.uid = uid;
 ...</pre></li>
     </ul>
 
