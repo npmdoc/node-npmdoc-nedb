@@ -1,4 +1,7 @@
-# api documentation for  [nedb (v1.8.0)](https://github.com/louischatriot/nedb)  [![npm package](https://img.shields.io/npm/v/npmdoc-nedb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nedb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nedb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nedb)
+# npmdoc-nedb
+
+#### basic api documentation for  [nedb (v1.8.0)](https://github.com/louischatriot/nedb)  [![npm package](https://img.shields.io/npm/v/npmdoc-nedb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nedb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nedb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nedb)
+
 #### File-based embedded data store for node.js
 
 [![NPM](https://nodei.co/npm/nedb.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/nedb)
@@ -77,7 +80,8 @@
     "scripts": {
         "test": "mocha --reporter spec --timeout 10000"
     },
-    "version": "1.8.0"
+    "version": "1.8.0",
+    "bin": {}
 }
 ```
 
